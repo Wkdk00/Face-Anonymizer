@@ -13,7 +13,7 @@
 
 <a name="-face-anonymizer-english"></a>
 ## Face Anonymizer (English)
-A service for face anonymization in photos: the user uploads an image, the system detects faces and returns a version with blurred regions.  
+A service for face anonymization in photos: the user uploads an image and videos, the system detects faces and returns a version with blurred regions.  
 Built with Python, uses MediaPipe for detection, and runs through a web interface.  
 Everything is containerized with Docker, and includes monitoring via Prometheus + Grafana.
 
@@ -33,6 +33,17 @@ Everything is containerized with Docker, and includes monitoring via Prometheus 
 - **Frontend** — Streamlit (simple web UI)
 - **Monitoring** — Prometheus collects metrics, Grafana visualizes them in real-time dashboards
 - **Containerization** — Everything is packaged in Docker and starts with a single command
+
+---
+
+- **Anonymization modes**
+  - `blur` — average blur filter
+  - `black` — fully hides the face with a black rectangle
+  - `pixel` — pixelization effect
+
+- **Video support** — the system can process both images and videos
+
+- **Download results** — processed files can be downloaded directly from the interface using the button below the preview
 
 ---
 
@@ -83,7 +94,7 @@ Under the hood — HTTP metrics from *prometheus-fastapi-instrumentator* and sys
 <a name="-face-anonymizer-russian"></a>
 ## Face Anonymizer (Русский)
 
-Сервис для анонимизации лиц на фото: Пользователь загружает фото, система обнаруживает лица и возвращает изображение с размытыми областями.  
+Сервис для анонимизации лиц на фото и видео: Пользователь загружает фото, система обнаруживает лица и возвращает изображение с размытыми областями.  
 Построен на Python, использует MediaPipe для детекции и работает через веб-интерфейс.  
 Всё завернуто в Docker, есть мониторинг через Prometheus.
 
@@ -103,6 +114,16 @@ Under the hood — HTTP metrics from *prometheus-fastapi-instrumentator* and sys
 - **Фронтенд** — Streamlit (простой веб-интерфейс)
 - **Мониторинг** — Prometheus собирает метрики
 - **Контейнеризация** — Всё это упаковано в Docker и поднимается одной командой
+
+---
+- **Режимы анонимизации**
+  - `blur` — размытие фильтром среднего
+  - `black` — полное затемнение области
+  - `pixel` — пикселизация
+
+- **Поддержка видео** — система умеет обрабатывать не только изображения, но и видео
+
+- **Скачивание результата** — обработанный файл можно скачать кнопкой под предпросмотром
 
 ---
 
